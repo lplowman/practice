@@ -24,6 +24,15 @@
 	padding: 10px;
 	text-align: center;
 }
+#thirdSection{
+	font-family: Verdana;
+	font-size: xx-large;
+	font-weight: lighter;
+	background-color: grey;
+	border-radius:3px;
+	padding: 10px;
+	text-align: center;
+}
 
 .buttonStyle {
 	border-radius: 4px;
@@ -61,6 +70,10 @@
 	<p id="coolIde"></p>
 	<button id="clickButton2" class="buttonStyle">click me</button>
 </div>
+<div id="thirdSection">
+	<p id="third"></p>
+	<button id="clickButton3" class="buttonStyle">click me</button>
+</div>
 
 <script> 
 var myButton = document.getElementById("clickButton");
@@ -69,8 +82,12 @@ var myText = document.getElementById("helloText");
 var myButton2 = document.getElementById("clickButton2");
 var myText2 = document.getElementById("coolIde");
 
+var myButton3 = document.getElementById("clickButton3");
+var myText3 = document.getElementById("third");
+
 myButton.addEventListener('click', doSomething, false);
 myButton2.addEventListener('click', nextSomething, false);
+myButton3.addEventListener('click', thirdSomething, false);
 
 function doSomething() {
 	myText.textContent = "hello, world!";
@@ -79,6 +96,10 @@ function doSomething() {
 
 function nextSomething(){
 	myText2.textContent = "This is a cool ide!";
+}
+
+function thirdSomething (){
+	myText3.textContent = "This is my third section";
 }
 
 </script>
